@@ -15,14 +15,3 @@ def isFB(fb)
     puts fb
   end
 end
-
-(1..100).each {|fb| isFB(fb)}
-
-puts 'tests: '
-isFB(3); isFB(5); isFB(15)
-isFB(33); isFB(55); isFB(3*5*15)
-
-isFB(33.3); isFB(55.5); isFB(15.15)
-isFB('3'); isFB('5'); isFB('15')
-
-isFB(true); isFB(false)
