@@ -1,11 +1,11 @@
 
 def num_to_words(num)
   numList = split_num_by_1000(num)
-  thousdToWordHas = { 0 => "", 1 => "thousand", 2 => "million", 3 => "billion", 4 => "trillion" }
+  thousandToWordHash = { 0 => "", 1 => "thousand", 2 => "million", 3 => "billion", 4 => "trillion" }
   words = ""
   numList.each_with_index do |num, index|
     if index != numList.length-1
-      words += convert_3digits_to_word(num) + " " + thousdToWordHas[numList.length-1 - index] + ", "
+      words += convert_3digits_to_word(num) + " " + thousandToWordHash[numList.length-1 - index] + ", "
     else
       words += convert_3digits_to_word(num)
     end
