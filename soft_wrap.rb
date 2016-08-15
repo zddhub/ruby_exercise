@@ -4,12 +4,13 @@ def wrap(content, max_length = 71)
 	oneline = ""
 	content.split(/\s+/).each do |word|
 		if oneline.size + word.size >= max_length
-			lines.push(oneline)
+			lines.push(oneline) if oneline.size != 0
 			oneline = word
 		else
 			oneline = oneline.size == 0 ? word : oneline + " " + word
 		end
 	end
+	lines.push(oneline) if oneline.size != 0
 	lines.join("\n")
 end
 
