@@ -6,7 +6,8 @@ def num_to_words(num)
   words = ""
   numList.each_with_index do |num, index|
     if index != numList.length-1
-      words += convert_3digits_to_word(num) + " " + thousandToWordHash[numList.length-1 - index] + ", "
+      str = convert_3digits_to_word(num)
+      words +=  str + " " + thousandToWordHash[numList.length-1 - index] + ", " if str != ""
     else
       words += convert_3digits_to_word(num)
     end

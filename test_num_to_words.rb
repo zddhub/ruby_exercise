@@ -66,6 +66,9 @@ describe 'test num_to_words function' do
     num_to_words(101).must_equal 'one hundred one'
     num_to_words(1001).must_equal 'one thousand, one'
     num_to_words(10001).must_equal 'ten thousand, one'
+    num_to_words(1000001).must_equal 'one million, one'
+    num_to_words(1000000001).must_equal 'one billion, one'
+    num_to_words(1000000000001).must_equal 'one trillion, one'
 
   end
 end
