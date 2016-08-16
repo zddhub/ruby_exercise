@@ -1,5 +1,6 @@
 
 def num_to_words(num)
+  return "zero" if num == 0
   numList = split_num_by_1000(num)
   thousandToWordHash = { 0 => "", 1 => "thousand", 2 => "million", 3 => "billion", 4 => "trillion" }
   words = ""
@@ -10,10 +11,12 @@ def num_to_words(num)
       words += convert_3digits_to_word(num)
     end
   end
-  words
+  words.strip
 end
 
 def split_num_by_1000(num)
+  num_str = "#{num}"
+  num = num_str.to_i(10)
   list = []
   while num != 0 do
     list << num % 1000
