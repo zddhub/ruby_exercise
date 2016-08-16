@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require './soft_wrap.rb'
+require_relative "../exercise/soft_wrap.rb"
 
 class SoftWrapTest < Minitest::Test
   def test_that_should_be_wrap_if_text_is_longer_than_max_length

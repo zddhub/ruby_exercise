@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require './num_to_words'
+require_relative "../exercise/num_to_words"
 
 describe 'split_num_by_1000 function' do
   it 'has a argument with less than 3 numbers' do
@@ -69,6 +69,5 @@ describe 'test num_to_words function' do
     num_to_words(1000001).must_equal 'one million, one'
     num_to_words(1000000001).must_equal 'one billion, one'
     num_to_words(1000000000001).must_equal 'one trillion, one'
-
   end
 end
