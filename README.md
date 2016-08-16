@@ -10,4 +10,4 @@ rake test
 
 ## License
 
-It is available as open sourcde under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+It is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
