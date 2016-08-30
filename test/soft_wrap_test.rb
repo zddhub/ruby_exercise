@@ -2,6 +2,7 @@ require "minitest/autorun"
 require_relative "../exercise/soft_wrap.rb"
 
 class SoftWrapTest < Minitest::Test
+  include Wrap
   def test_that_should_be_wrap_if_text_is_longer_than_max_length
     text = "abc" + " abc" * 5
     assert_equal "abc abc abc abc\nabc abc", wrap(text, 15)

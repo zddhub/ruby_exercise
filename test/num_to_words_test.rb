@@ -1,6 +1,8 @@
 require "minitest/autorun"
 require_relative "../exercise/num_to_words"
 
+include NumToWords
+
 describe 'split_num_by_1000 function' do
   it 'has a argument with less than 3 numbers' do
     split_num_by_1000(1).must_equal [1]
